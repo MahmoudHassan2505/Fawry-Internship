@@ -1,11 +1,11 @@
 public class Account {
-    private int accountNumber;
+    private String accountNumber;
     private String accountName;
     private float accountBalance;
 
 
 
-    public Account(int accNum, String accName, float accBalance){
+    public Account(String accNum, String accName, float accBalance){
         setAccountNumber(accNum);
         setAccountName(accName);
         setAccountBalance(accBalance);
@@ -13,24 +13,18 @@ public class Account {
     }
 
     public void deposite(float amount){
-        if(amount<0)
-            throw new RuntimeException("unvalid Number");
-        else
-            setAccountBalance(getAccountBalance()+amount);
+        negativeNumber(amount);
+        setAccountBalance(getAccountBalance()+amount);
 
     }
     public void withdraw(float amount){
-        if(amount<0)
-            throw new RuntimeException("unvaild Number");
-        else
-            setAccountBalance(getAccountBalance()-amount);
+        negativeNumber(amount);
+        setAccountBalance(getAccountBalance()-amount);
     }
 
     public void setAccountBalance(float accountBalance) {
-        if (accountBalance >= 0)
-            this.accountBalance = accountBalance;
-        else
-            throw new RuntimeException("unvaild Number");
+        negativeNumber(accountBalance);
+        this.accountBalance = accountBalance;
     }
 
     public float getAccountBalance() {
@@ -45,11 +39,11 @@ public class Account {
         this.accountName = accountName;
     }
 
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -60,5 +54,9 @@ public class Account {
                 ", accountNumber='" + getAccountNumber() + '\'' +
                 ", accountBalance=" + getAccountBalance() +
                 '}';
+    }
+    private void negativeNumber(float Number){
+        if(Number<0)
+            throw new RuntimeException("inCompleted operation because Amount is Negative");
     }
 }

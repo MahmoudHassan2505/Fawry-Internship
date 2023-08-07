@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Bank {
 
@@ -6,31 +7,40 @@ public class Bank {
     public Bank(){
         accounts=new ArrayList<Account>();
     }
-    public void addAccount(Account a) {
-        accounts.add(a); 
+    public void addAccount(String accName,float accBalance) {
+        accounts.add(new Account(generateAccountNumber(),accName,accBalance));
 
     }
-    public void deposit(int accountnubmer,float amount){
-        int index=getindex(accountnubmer);
-
-     if (index> accounts.size()) throw new RuntimeException("User Not Found3"+index);
-     accounts.get(index).deposite(amount);
+    public void deposit(String accNumber,float amount){
+        findAccount(accNumber).deposite(amount);
     }
-    public void withdraw(int accountnubmer,float amount){
-        int num=getindex(accountnubmer);
-        if (num>= accounts.size()) throw new RuntimeException("User Not Found2");
-        accounts.get(num).withdraw(amount);    }
+    public void withdraw(String accNumber,float amount){
+        findAccount(accNumber).withdraw(amount);
+    }
 
-    public void displayBalance(int accountnubmer){
-        int num=getindex(accountnubmer);
-        if (num>= accounts.size()) throw new RuntimeException("User Not Found1");
-        System.out.println(accounts.get(num).getAccountBalance());    }
-        public int getindex(int num){
-            for(int i=0;i<accounts.size();i++){
-                if(accounts.get(i).getAccountNumber()==num) return i;
-            }
-            return 100000;
+    public void displayBalance(String accNumber){
+        System.out.println(findAccount(accNumber).getAccountBalance());
+    }
 
-            
+    public Account findAccount(String accNumber){
+        for (Account account:accounts) {
+            if (account.getAccountNumber().equals(accNumber))
+                return account;
         }
+        throw new RuntimeException("Can't Find Account");
+    }
+    public String generateAccountNumber(){
+        String accNumber ="2505 ";
+        Random random = new Random();
+
+        for (int i=0;i<4;i++){
+            accNumber += Integer.toString(random.nextInt(10));
+        }
+
+        System.out.println("generated Number is :" + accNumber);
+
+        return accNumber;
+    }
+
+
 }
