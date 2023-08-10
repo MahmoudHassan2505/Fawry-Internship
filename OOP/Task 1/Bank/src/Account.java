@@ -55,7 +55,7 @@ public class Account {
                 ", accountBalance=" + getAccountBalance() +
                 '}';
     }
-    private void negativeNumber(float Number){
+    private void isNegativeNumber(float Number){
         if(Number<0)
             throw new RuntimeException("inCompleted operation because Amount is Negative");
     }
