@@ -76,6 +76,24 @@ public class StoreTest {
         Assertions.assertThrows(RuntimeException.class,()->myStore.buy(product,customer));
 
     }
+    @Test()
+    void whenWithdrawFailsAndQuantitynotChanged(){
+        //arrange
+        Customer customer = new Customer();
+
+        AccountManager accountManager =Mockito.mock(AccountManager.class);
+        when(accountManager.withdraw(eq(customer),anyInt())).thenReturn("fails");
+
+        MyStore myStore = new MyStore(accountManager);
+
+        Product product = new Product();
+        product.setQuantity(5);
+
+
+        //act
+        Assertions.assertEquals(5,product.getQuantity());
+
+    }
 
 
 }

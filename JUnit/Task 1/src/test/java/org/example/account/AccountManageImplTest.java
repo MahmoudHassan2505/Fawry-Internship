@@ -1,6 +1,7 @@
 package org.example.account;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -9,12 +10,16 @@ import static org.mockito.Mockito.when;
 
 public class AccountManageImplTest {
 
-
-
-
+    @Test
+    public void deposit_Positive_Amount(){
+        AccountManager accountManager = new AccountManagerImpl();
+        Customer customer = Mockito.mock(Customer.class);
+        accountManager.withdraw(customer,100);
+        verify(customer).setBalance(customer.getBalance()+100);
+    }
 
     @Test
-    public void withEnoughMoney(){
+    public void withdraw_With_EnoughMoney(){
         //arrange
         AccountManager accountManager =new AccountManagerImpl();
         Customer customer=Mockito.mock(Customer.class);
@@ -29,7 +34,7 @@ public class AccountManageImplTest {
     }
 
     @Test
-    public void notEnoughMoneyAndNotAllowedCredit(){
+    public void Withdraw_notEnoughMoney_NotAllowedCredit(){
         //arrange
         Customer customer=Mockito.mock(Customer.class);
         AccountManager accountManager =new AccountManagerImpl();
@@ -45,7 +50,7 @@ public class AccountManageImplTest {
     }
 
     @Test
-    public void notEnoughMoney_AllowedCredit_ExceedMax_NotVIP(){
+    public void withdraw_notEnoughMoney_AllowedCredit_ExceedMax_NotVIP(){
         //arrange
         Customer customer=Mockito.mock(Customer.class);
         AccountManager accountManager =new AccountManagerImpl();
@@ -64,7 +69,7 @@ public class AccountManageImplTest {
     }
 
     @Test
-    public void notEnoughMoney_AllowedCredit_ExceedMax_IsVIP(){
+    public void withdraw_notEnoughMoney_AllowedCredit_ExceedMax_IsVIP(){
         //arrange
         Customer customer=Mockito.mock(Customer.class);
         AccountManager accountManager =new AccountManagerImpl();
@@ -83,7 +88,7 @@ public class AccountManageImplTest {
     }
 
     @Test
-    public void notEnoughMoney_AllowedCredit_NotExceedMax_NotVIP(){
+    public void Withdraw_notEnoughMoney_AllowedCredit_NotExceedMax_NotVIP(){
         //arrange
         Customer customer=Mockito.mock(Customer.class);
         AccountManager accountManager =new AccountManagerImpl();
