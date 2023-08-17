@@ -10,7 +10,9 @@ Software design principles are a set of guidelines that helps developers to make
  <img src="img/association.png" width ="100"/>
 
 #### Example
-            Example of a relationship between Teacher and Student. Multiple students can associate with a single teacher and a single student can associate with multiple teachers. But there is no ownership between the objects and both have their own lifecycle. Both can be created and deleted independently.
+            Example of a relationship between Teacher and Student. Multiple students can associate with a single teacher
+            and a single student can associate with multiple teachers. But there is no ownership between the objects and
+            both have their own lifecycle. Both can be created and deleted independently.
 <p align = "center"><img src="img/association-diagram.png"></p>
 </div>
 
@@ -23,7 +25,8 @@ Software design principles are a set of guidelines that helps developers to make
 <img src="img/aggregation.png" width ="100"/>
 
 #### Example
-        Let’s take an example of a relationship between the Department and Teacher. A Teacher may belong to multiple departments. Hence Teacher is a part of multiple departments. But if we delete a Department, Teacher Object will not destroy.
+        Let’s take an example of a relationship between the Department and Teacher. A Teacher may belong to multiple departments.
+        Hence Teacher is a part of multiple departments. But if we delete a Department, Teacher Object will not destroy.
  
 <p align="center"><img src="img/aggregation-diagram.png"></p>
 </div>
@@ -32,12 +35,15 @@ Software design principles are a set of guidelines that helps developers to make
 
 ### 3. Composition: 
    - It is a strong type of Aggregation. 
-   - In this relationship, child objects do not have their lifecycle without the Parent object. If a parent object is deleted, all its child objects will also be deleted. 
+   - In this relationship, child objects do not have their lifecycle without the Parent object. If a parent object is deleted, all its child objects will also be deleted.
    -  This is represented by a solid diamond followed by a line.
   <img src="img/composition.png" width="100"/>
-#### Example:
+  
+  #### Example
 
-            Let’s take an example of a relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room cannot belongs to two different houses if we delete the house room will automatically delete.
+            Let’s take an example of a relationship between House and rooms. House can contain multiple rooms
+            there is no independent life of room and any room cannot belongs to two different houses if we delete the house room
+            will automatically delete.
 <p align="center"><img src="img/composition-diagram.png"></p>
 </div>
 
@@ -70,19 +76,24 @@ Software design principles are a set of guidelines that helps developers to make
 * This principle states that there should never be more than one reason for a class to change
 * You should design your classes in such a way that each class should have a single purpose.
 #### Example:
-        An Account class is responsible for managing Current and Saving Account but a CurrentAccount and a SavingAccount classes would be responsible for managing current and saving accounts respectively. Hence both are responsible for single purpose only. Hence we are moving towards specialization.
+        An Account class is responsible for managing Current and Saving Account but a CurrentAccount and a SavingAccount classes
+        would be responsible for managing current and saving accounts respectively. Hence both are responsible for single purpose only.
+        Hence we are moving towards specialization.
 
 ## 2. Open/Closed Principle (OCP):
 * software entities (classes, modules, functions, etc.) should be open for extension but closed for modification
 * The "closed" part of the rule states that once a module has been developed and tested, the code should only be changed to correct bugs.
 * The "open" part says that you should be able to extend existing code in order to introduce new functionality.
 #### Example
-        A PaymentGateway base class contains all basic payment related properties and methods. This class can be extended by different PaymentGateway classes for different payment gateway vendors to achieve theirs functionalities. Hence it is open for extension but closed for modification.
+        A PaymentGateway base class contains all basic payment related properties and methods. This class can be extended by
+        different PaymentGateway classes for different payment gateway vendors to achieve theirs functionalities.
+        Hence it is open for extension but closed for modification.
 
 ## 3. Liscov Substitution Principle (LSP):
 * New derived classes are extending the base classes without changing their behavior
 #### Example
-        Assume that you have an inheritance hierarchy with Person and Student. Wherever you can use Person, you should also be able to use a Student, because Student is a subclass of Person.
+        Assume that you have an inheritance hierarchy with Person and Student. Wherever you can use Person,
+        you should also be able to use a Student, because Student is a subclass of Person.
 
 ## 4. Interface Segregation Principle (ISP):
 * Clients should not be forced to depend upon interfaces that they don’t use.
@@ -93,9 +104,9 @@ Software design principles are a set of guidelines that helps developers to make
 * High level modules should not depend upon low level modules. Both should depend upon abstractions.
 * Abstractions should not depend upon details. Details should depend upon abstractions.
   #### Example 
-        - if we have a high level module which is (Driver) and Low Level Module Which is (Car) both Should Depend on Abstract Class Called (Vehicle).
-        
-        - Now if both classes depend on abstract vehicle class then the Driver Can drive Bus not only Cars
+        if we have a high level module which is (Driver) and Low Level Module Which is (Car)
+        both Should Depend on Abstract Class Called (Vehicle).        
+        Now if both classes depend on abstract vehicle class then the Driver Can drive Bus not only Cars
 <br>
 
 ## Other Principles:
