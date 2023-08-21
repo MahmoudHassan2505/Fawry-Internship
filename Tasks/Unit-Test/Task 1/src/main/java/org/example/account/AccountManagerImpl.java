@@ -3,8 +3,13 @@ package org.example.account;
 public class AccountManagerImpl implements AccountManager {
     private static int MAX_CREDIT = 1000;
     @Override
-    public void deposit(Customer customer, int amount) {
-        customer.setBalance(customer.getBalance() + amount);
+    public String deposit(Customer customer, int amount) {
+        if(amount<0)
+            return "Amount can't be negative";
+        else {
+            customer.setBalance(customer.getBalance() + amount);
+            return "success";
+        }
     }
 
     @Override

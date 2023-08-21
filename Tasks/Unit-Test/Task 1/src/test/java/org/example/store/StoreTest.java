@@ -1,21 +1,16 @@
 package org.example.store;
 
 import org.example.account.AccountManager;
-import org.example.account.AccountManagerImpl;
 import org.example.account.Customer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
-import java.util.List;
-
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-public class StoreTest {
+ class StoreTest {
     @Test
     void successfullBuy(){
         //arrange
@@ -83,8 +78,6 @@ public class StoreTest {
 
         AccountManager accountManager =Mockito.mock(AccountManager.class);
         when(accountManager.withdraw(eq(customer),anyInt())).thenReturn("fails");
-
-        MyStore myStore = new MyStore(accountManager);
 
         Product product = new Product();
         product.setQuantity(5);
