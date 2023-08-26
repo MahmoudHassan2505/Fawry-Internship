@@ -8,36 +8,24 @@ import java.util.ArrayList;
 public class BoschMotionSensor implements Sensor{
 
    private boolean isOn;
-   private static BoschMotionSensor obj;
    ArrayList<Alarm> alarms;
    private Owner owner;
 
-    private BoschMotionSensor() {
+    public BoschMotionSensor() {
         alarms = new ArrayList<>();
     }
 
-    public static BoschMotionSensor getInstance()
-    {
-        if (obj == null)
-        {
-            synchronized (BoschMotionSensor.class)
-            {
-                if (obj==null)
-                    obj = new BoschMotionSensor();
-            }
-        }
-        return obj;
-    }
+
     @Override
     public void turnOn() {
         System.out.println("BOSCH Motion sensor turned on");
-        obj.isOn = true;
+        this.isOn = true;
     }
 
     @Override
     public void turnOff() {
         System.out.println("BOSCH Motion sensor turned off");
-        obj.isOn =false;
+        this.isOn =false;
     }
 
     public void addAlarm(Alarm alarm){
@@ -54,7 +42,7 @@ public class BoschMotionSensor implements Sensor{
 
     @Override
     public void alert() {
-        if(obj.isOn){
+        if(this.isOn){
             System.out.println("alert(from Object) : Motion Detected");
 
             alarms.stream()

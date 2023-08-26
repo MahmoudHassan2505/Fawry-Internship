@@ -8,36 +8,24 @@ import java.util.ArrayList;
 
 public class BoschSmokeSensor implements Sensor{
     private boolean isOn;
-    private static BoschSmokeSensor obj;
     ArrayList<Alarm> alarms;
     private Owner owner;
 
-    private BoschSmokeSensor() {
+    public BoschSmokeSensor() {
         alarms = new ArrayList<>();
     }
 
-    public static BoschSmokeSensor getInstance()
-    {
-        if (obj == null)
-        {
-            synchronized (BoschSmokeSensor.class)
-            {
-                if (obj==null)
-                    obj = new BoschSmokeSensor();
-            }
-        }
-        return obj;
-    }
+
     @Override
     public void turnOn() {
         System.out.println("BOSCH Smoke sensor turned on");
-        obj.isOn = true;
+        this.isOn = true;
     }
 
     @Override
     public void turnOff() {
         System.out.println("BOSCH Smoke sensor turned off");
-        obj.isOn =false;
+        this.isOn =false;
     }
 
     public void addAlarm(Alarm alarm){
@@ -54,7 +42,7 @@ public class BoschSmokeSensor implements Sensor{
 
     @Override
     public void alert() {
-        if(obj.isOn){
+        if(this.isOn){
             System.out.println("alert : Smoke Detected ");
 
             alarms.stream()

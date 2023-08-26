@@ -9,41 +9,26 @@ import java.util.ArrayList;
 public class SchneiderMotionSensor implements Sensor{
 
     private boolean isOn;
-    private static SchneiderMotionSensor obj;
     ArrayList<Alarm> alarms;
 
     private Owner owner;
 
 
-    private SchneiderMotionSensor() {
+    public SchneiderMotionSensor() {
         alarms = new ArrayList<>();
     }
 
-    public static SchneiderMotionSensor getInstance()
-    {
-        if (obj == null)
-        {
-            // To make thread safe
-            synchronized (SchneiderMotionSensor.class)
-            {
-                // check again as multiple threads
-                // can reach above step
-                if (obj==null)
-                    obj = new SchneiderMotionSensor();
-            }
-        }
-        return obj;
-    }
+
     @Override
     public void turnOn() {
         System.out.println("Schneider Motion sensor turned on");
-        obj.isOn = true;
+        this.isOn = true;
     }
 
     @Override
     public void turnOff() {
         System.out.println("Schneider Motion sensor turned off");
-        obj.isOn =false;
+        this.isOn =false;
     }
 
     public void addAlarm(Alarm alarm){
@@ -62,7 +47,7 @@ public class SchneiderMotionSensor implements Sensor{
 
     @Override
     public void alert() {
-        if(obj.isOn){
+        if(this.isOn){
             System.out.println("alert :Motion Detected");
 
             alarms.stream()

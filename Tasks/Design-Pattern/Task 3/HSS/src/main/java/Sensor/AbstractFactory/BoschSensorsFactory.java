@@ -10,9 +10,9 @@ public class BoschSensorsFactory extends SensorFactory{
     public Sensor getSensor(SensorEnum sensor) {
         switch (sensor){
 
-            case Smoke : return BoschSmokeSensor.getInstance();
+            case Smoke : return new BoschSmokeSensor();
 
-            case Motion : return  BoschMotionSensor.getInstance();
+            case Motion : return new  BoschMotionSensor();
 
             default : return null;
         }

@@ -10,34 +10,22 @@ public class SchneiderSmokeSensor implements Sensor{
 
 
     private boolean isOn;
-    private static SchneiderSmokeSensor obj;
     ArrayList<Alarm> alarms;
     private Owner owner;
 
-    private SchneiderSmokeSensor() {alarms = new ArrayList<>();}
+    public SchneiderSmokeSensor() {alarms = new ArrayList<>();}
 
-    public static SchneiderSmokeSensor getInstance()
-    {
-        if (obj == null)
-        {
-            synchronized (SchneiderSmokeSensor.class)
-            {
-                if (obj==null)
-                    obj = new SchneiderSmokeSensor();
-            }
-        }
-        return obj;
-    }
+
     @Override
     public void turnOn() {
         System.out.println("Schneider Smoke sensor turned on");
-        obj.isOn = true;
+        this.isOn = true;
     }
 
     @Override
     public void turnOff() {
         System.out.println("Schneider Smoke sensor turned off");
-        obj.isOn =false;
+        this.isOn =false;
     }
 
     public void addAlarm(Alarm alarm){
@@ -54,7 +42,7 @@ public class SchneiderSmokeSensor implements Sensor{
 
     @Override
     public void alert() {
-        if(obj.isOn){
+        if(this.isOn){
             System.out.println("alert :Smoke Detected");
 
             alarms.stream()

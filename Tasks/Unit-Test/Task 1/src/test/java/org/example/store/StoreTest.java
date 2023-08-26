@@ -2,8 +2,6 @@ package org.example.store;
 
 import org.example.account.AccountManager;
 import org.example.account.Customer;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -38,9 +36,10 @@ class StoreTest {
         myStore.buy(product, customer);
 
         // assert
-        Assertions.assertEquals(4, product.getQuantity());
-
+        assertThat(product.getQuantity()).isEqualTo(4);
     }
+
+
 
     @Test()
     void outOfStock() {
@@ -53,7 +52,7 @@ class StoreTest {
         product.setQuantity(0);
 
         // act,assert
-        Assertions.assertThrows(RuntimeException.class, () -> myStore.buy(product, customer));
+        assertThatThrownBy(() -> myStore.buy(product, customer)).isInstanceOf(RuntimeException.class).hasMessage("Product out of stock");
 
     }
 
@@ -68,7 +67,7 @@ class StoreTest {
         product.setQuantity(5);
 
         // act, Assert
-        Assertions.assertThrows(RuntimeException.class, () -> myStore.buy(product, customer));
+        assertThatThrownBy(() -> myStore.buy(product, customer)).isInstanceOf(RuntimeException.class).hasMessage("Payment failure: fails");
 
     }
 
@@ -81,7 +80,7 @@ class StoreTest {
         product.setQuantity(5);
 
         // act,assert
-        Assertions.assertEquals(5, product.getQuantity());
+        assertThat(product.getQuantity()).isEqualTo(5);
 
     }
 

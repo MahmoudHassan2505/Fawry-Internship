@@ -8,9 +8,9 @@ public class SchneiderSensorsFactory extends SensorFactory{
     public Sensor getSensor(SensorEnum sensor) {
         switch (sensor){
 
-            case Smoke : return  SchneiderSmokeSensor.getInstance();
+            case Smoke : return new SchneiderSmokeSensor();
 
-            case Motion : return  SchneiderMotionSensor.getInstance();
+            case Motion : return new SchneiderMotionSensor();
 
             default : return null;
         }

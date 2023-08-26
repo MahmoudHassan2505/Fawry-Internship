@@ -1,8 +1,8 @@
 package org.example.account;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 
 public class AccountManageImplTest {
@@ -23,7 +23,8 @@ public class AccountManageImplTest {
         accountManager.deposit(customer,100);
 
         //assert
-        Assertions.assertEquals(100,customer.getBalance());
+        assertThat(customer.getBalance()).isEqualTo(100);
+
     }
 
     @Test
@@ -33,7 +34,7 @@ public class AccountManageImplTest {
         accountManager.deposit(customer,500);
 
         //assert
-        Assertions.assertEquals(600,customer.getBalance());
+        assertThat(customer.getBalance()).isEqualTo(600);
     }
 
     @Test
@@ -45,7 +46,7 @@ public class AccountManageImplTest {
         String result = accountManager.withdraw(customer,1000);
 
         //assert
-        Assertions.assertEquals("success",result);
+        assertThat(result).isEqualTo("success");
 
     }
 
@@ -59,7 +60,7 @@ public class AccountManageImplTest {
         String result = accountManager.withdraw(customer,8000);
 
         //assert
-        Assertions.assertEquals("insufficient account balance",result);
+        assertThat(result).isEqualTo("insufficient account balance");
 
     }
 
@@ -74,7 +75,7 @@ public class AccountManageImplTest {
         String result = accountManager.withdraw(customer,6500);
 
         //assert
-        Assertions.assertEquals("maximum credit exceeded",result);
+        assertThat(result).isEqualTo("maximum credit exceeded");
 
 
     }
@@ -90,7 +91,7 @@ public class AccountManageImplTest {
         String result = accountManager.withdraw(customer,6500);
 
         //assert
-        Assertions.assertEquals("success",result);
+        assertThat(result).isEqualTo("success");
 
 
     }
@@ -106,7 +107,7 @@ public class AccountManageImplTest {
         String result = accountManager.withdraw(customer,5500);
 
         //assert
-        Assertions.assertEquals("success",result);
+        assertThat(result).isEqualTo("success");
 
 
     }
