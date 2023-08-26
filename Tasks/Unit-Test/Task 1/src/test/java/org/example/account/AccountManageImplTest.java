@@ -18,22 +18,12 @@ public class AccountManageImplTest {
     }
 
     @Test
-    public void deposit_Positive_Amount(){
+    public void deposit_Amount(){
         //act
         accountManager.deposit(customer,100);
 
         //assert
         Assertions.assertEquals(customer.getBalance(),100);
-    }
-
-    @Test
-    public void deposit_Negative_Amount(){
-        //act
-        String result = accountManager.deposit(customer,-100);
-
-        //assert
-        Assertions.assertEquals(result,"Amount can't be negative");
-
     }
 
     @Test

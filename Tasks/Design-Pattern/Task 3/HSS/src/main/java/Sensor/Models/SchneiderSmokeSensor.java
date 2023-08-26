@@ -1,0 +1,75 @@
+package Sensor.Models;
+
+import Actuators.Alarm;
+import Data.Owner;
+import Message.SMSImp;
+
+import java.util.ArrayList;
+
+public class SchneiderSmokeSensor implements Sensor{
+
+
+    private boolean isOn;
+    private static SchneiderSmokeSensor obj;
+    ArrayList<Alarm> alarms;
+    private Owner owner;
+
+    private SchneiderSmokeSensor() {alarms = new ArrayList<>();}
+
+    public static SchneiderSmokeSensor getInstance()
+    {
+        if (obj == null)
+        {
+            synchronized (SchneiderSmokeSensor.class)
+            {
+                if (obj==null)
+                    obj = new SchneiderSmokeSensor();
+            }
+        }
+        return obj;
+    }
+    @Override
+    public void turnOn() {
+        System.out.println("Schneider Smoke sensor turned on");
+        obj.isOn = true;
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Schneider Smoke sensor turned off");
+        obj.isOn =false;
+    }
+
+    public void addAlarm(Alarm alarm){
+        alarms.add(alarm);
+    }
+
+    public void removeAlarm(Alarm alarm){
+        alarms.remove(alarm);
+    }
+
+    public void setOwner(Owner owner){
+        this.owner = owner;
+    }
+
+    @Override
+    public void alert() {
+        if(obj.isOn){
+            System.out.println("alert :Smoke Detected");
+
+            alarms.stream()
+                    .forEach(alarm -> alarm.turnOn());
+
+            new SMSImp("Smoke Detected",owner.getPhoneNumber()).send();
+        }
+
+    }
+
+    @Override
+    public void alertsOff() {
+        System.out.println("(from Object) : turning alerts off");
+
+        alarms.stream()
+                .forEach(alarm -> alarm.turnOff());
+    }
+}
