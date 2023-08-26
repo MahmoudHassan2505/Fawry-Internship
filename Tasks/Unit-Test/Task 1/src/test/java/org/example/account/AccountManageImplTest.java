@@ -23,7 +23,17 @@ public class AccountManageImplTest {
         accountManager.deposit(customer,100);
 
         //assert
-        Assertions.assertEquals(customer.getBalance(),100);
+        Assertions.assertEquals(100,customer.getBalance());
+    }
+
+    @Test
+    public void deposit_Amount_with_initial_money(){
+        //act
+        accountManager.deposit(customer,100);
+        accountManager.deposit(customer,500);
+
+        //assert
+        Assertions.assertEquals(600,customer.getBalance());
     }
 
     @Test

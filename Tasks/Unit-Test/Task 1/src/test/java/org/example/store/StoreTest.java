@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.when;
+import static org.assertj.core.api.Assertions.*;
 
 class StoreTest {
 
