@@ -25,6 +25,7 @@ public class BoschSmokeSensor implements Sensor{
     @Override
     public void turnOff() {
         System.out.println("BOSCH Smoke sensor turned off");
+        sensorLog("BOSCH Smoke sensor turned off");
         this.isOn =false;
     }
 
@@ -44,9 +45,13 @@ public class BoschSmokeSensor implements Sensor{
     public void alert() {
         if(this.isOn){
             System.out.println("alert : Smoke Detected ");
+            sensorLog("SensorAlert: Smoke Detected");
 
             alarms.stream()
-                    .forEach(alarm -> alarm.turnOn());
+                    .forEach(alarm -> {
+                        alarm.turnOn();
+                        sensorLog("Turning "+alarm.getAlarmName()+" On");
+                    });
 
             new SMSImp("Smoke Detected",owner.getPhoneNumber()).send();
         }
@@ -58,6 +63,8 @@ public class BoschSmokeSensor implements Sensor{
         System.out.println("(from Object) : turning alerts off");
 
         alarms.stream()
-                .forEach(alarm -> alarm.turnOff());
+                .forEach(alarm -> {
+                    alarm.turnOff();
+                    sensorLog("Turning "+alarm.getAlarmName()+" Off");});
     }
 }

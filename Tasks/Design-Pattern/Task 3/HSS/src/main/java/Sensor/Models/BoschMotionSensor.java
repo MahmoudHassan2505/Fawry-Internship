@@ -25,6 +25,7 @@ public class BoschMotionSensor implements Sensor{
     @Override
     public void turnOff() {
         System.out.println("BOSCH Motion sensor turned off");
+        sensorLog("BOSCH Motion sensor turned off");
         this.isOn =false;
     }
 
@@ -44,9 +45,13 @@ public class BoschMotionSensor implements Sensor{
     public void alert() {
         if(this.isOn){
             System.out.println("alert(from Object) : Motion Detected");
+            sensorLog("SensorAlert: Motion Detected");
 
             alarms.stream()
-                    .forEach(alarm -> alarm.turnOn());
+                    .forEach(alarm -> {
+                        alarm.turnOn();
+                        sensorLog("Turning "+alarm.getAlarmName()+" On");
+                    });
 
             new SMSImp("Motion Detected",owner.getPhoneNumber()).send();
 
@@ -58,6 +63,8 @@ public class BoschMotionSensor implements Sensor{
         System.out.println("(from Object) : all alarms is off");
 
         alarms.stream()
-                .forEach(alarm -> alarm.turnOff());
+                .forEach(alarm -> {
+                    alarm.turnOff();
+                    sensorLog("Turning "+alarm.getAlarmName()+" Off");});
     }
 }

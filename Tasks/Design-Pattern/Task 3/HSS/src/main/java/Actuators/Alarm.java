@@ -1,6 +1,6 @@
 package Actuators;
 
-public class Alarm {
+public class Alarm implements Acuator{
 
     private String alarmName;
 
@@ -13,5 +13,9 @@ public class Alarm {
 
     public void turnOff(){
         System.out.println(alarmName+" :Alarm is turned Off");
+    }
+
+    public String getAlarmName() {
+        return alarmName;
     }
 }

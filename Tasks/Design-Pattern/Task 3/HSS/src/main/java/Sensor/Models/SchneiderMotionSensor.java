@@ -28,6 +28,7 @@ public class SchneiderMotionSensor implements Sensor{
     @Override
     public void turnOff() {
         System.out.println("Schneider Motion sensor turned off");
+        sensorLog("Schneider Motion sensor turned off");
         this.isOn =false;
     }
 
@@ -49,9 +50,13 @@ public class SchneiderMotionSensor implements Sensor{
     public void alert() {
         if(this.isOn){
             System.out.println("alert :Motion Detected");
+            sensorLog("SensorAlert: Motion Detected");
 
             alarms.stream()
-                    .forEach(alarm -> alarm.turnOn());
+                    .forEach(alarm -> {
+                        alarm.turnOn();
+                        sensorLog("Turning "+alarm.getAlarmName()+" On");
+                    });
 
             new SMSImp("Motion Detected",owner.getPhoneNumber()).send();
         }
@@ -63,6 +68,8 @@ public class SchneiderMotionSensor implements Sensor{
         System.out.println("(from Object) : turning alerts off");
 
         alarms.stream()
-                .forEach(alarm -> alarm.turnOff());
+                .forEach(alarm -> {
+                    alarm.turnOff();
+                    sensorLog("Turning "+alarm.getAlarmName()+" Off");});
     }
 }

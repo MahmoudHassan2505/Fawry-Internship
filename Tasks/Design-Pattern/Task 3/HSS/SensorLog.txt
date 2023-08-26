@@ -1,0 +1,14 @@
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: SensorAlert: Motion Detected
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm1 On
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm2 On
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm3 On
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm1 Off
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm2 Off
+Aug 26, 2023 8:09:04 PM logger.SensorLogger addlog
+INFO: Turning alarm3 Off

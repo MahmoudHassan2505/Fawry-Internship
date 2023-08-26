@@ -1,6 +1,6 @@
 package Actuators;
 
-public class WaterSparkels {
+public class WaterSparkels implements Acuator{
 
     private String name;
 

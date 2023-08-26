@@ -1,13 +1,19 @@
 import Actuators.Alarm;
+import Command.RemoteControl;
+import Command.TurnOffActuators;
+import Command.TurnOnSensor;
 import Data.Owner;
 import Sensor.AbstractFactory.BoschSensorsFactory;
-import Sensor.Models.BoschMotionSensor;
-import Sensor.Models.BoschSmokeSensor;
 import Sensor.Models.Sensor;
 import Sensor.Models.SensorEnum;
+import logger.SensorLogger;
+
 
 public class Main {
     public static void main(String[] args) {
+        //add Remote Control
+        RemoteControl remote = new RemoteControl();
+
         // getting Motion Sensor (BOSCH)
         BoschSensorsFactory boschSensorsFactory = new BoschSensorsFactory();
         Sensor boschMotionSensor = boschSensorsFactory.getSensor(SensorEnum.Motion);
@@ -18,11 +24,14 @@ public class Main {
         Alarm alarm3 = new Alarm("alarm3");
         Alarm alarm4 = new Alarm("alarm4");
 
-        // Turning Sensor on and add Alarm
-        boschMotionSensor.turnOn();
+        // add Alarm to sensor
         boschMotionSensor.addAlarm(alarm1);
         boschMotionSensor.addAlarm(alarm2);
         boschMotionSensor.addAlarm(alarm3);
+
+        //turn sensor on
+        remote.setCommand(new TurnOnSensor(boschMotionSensor));
+        remote.press();
 
         // adding Owner
         boschMotionSensor.setOwner(new Owner("Mahmoud", 265012));
@@ -31,11 +40,12 @@ public class Main {
         boschMotionSensor.alert();
 
         // turn alerts off
-        boschMotionSensor.alertsOff();
+        remote.setCommand(new TurnOffActuators(boschMotionSensor));
+        remote.press();
 
-        // remove alert 2 and set alarms again
-//        boschMotionSensor.removeAlarm(alarm2);
-//        boschMotionSensor.alert();
+
+
+
 
     }
 }
