@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/Health</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">1Direction</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="current_session_context_class">thread</property>
+        <mapping class="org.example.Entity.Hospital" />
+        <mapping class="org.example.Entity.Patient" />
+        <mapping class="org.example.Entity.Drug" />
+        <mapping class="org.example.Entity.Doctor" />
+
+    </session-factory>
+</hibernate-configuration>

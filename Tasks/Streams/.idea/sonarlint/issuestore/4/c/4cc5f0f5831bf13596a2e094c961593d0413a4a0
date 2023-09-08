@@ -1,0 +1,27 @@
+
+E
+java:S1604"(Make this anonymous inner class a lambda(áÑƒ¤8ÂÃ·£1
+J
+java:S1604"(Make this anonymous inner class a lambda(Æ™Í¶ûÿÿÿÿ8ÂÃ·£1
+E
+java:S1604&"(Make this anonymous inner class a lambda(áÑƒ¤8ÄÃ·£1
+J
+java:S1604+"(Make this anonymous inner class a lambda(Æ™Í¶ûÿÿÿÿ8ÄÃ·£1
+E
+java:S16046"(Make this anonymous inner class a lambda(áÑƒ¤8ÄÃ·£1
+J
+java:S1604;"(Make this anonymous inner class a lambda(Æ™Í¶ûÿÿÿÿ8ÄÃ·£1
+E
+java:S1604F"(Make this anonymous inner class a lambda(áÑƒ¤8ÄÃ·£1
+J
+java:S1604K"(Make this anonymous inner class a lambda(Æ™Í¶ûÿÿÿÿ8ÄÃ·£1
+Ñ
+java:S1598"³This file "LambdaExample.java" should be located in "org\tasks\week5\Java8\LamdaTask" directory, not in "E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Streams\LamdaTask".(øğ8ÄÃ·£1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(øğ8ÅÃ·£1
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(Ö‘è8ÖÃ·£1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ñÜ·£1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ñÜ·£1
+Q
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷”8ñÜ·£1

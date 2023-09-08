@@ -1,0 +1,25 @@
+
+l	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹È¡d8ÕÁâ·£1
+r	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õèØÍùÿÿÿÿ8ÕÁâ·£1
+Õ
+java:S1598"·This file "StreamsExample.java" should be located in "org\tasks\week5\Java8\StreamsTask" directory, not in "E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Streams\StreamTask".(œ•­÷8ÖÁâ·£1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(œ•­÷8ÖÁâ·£1
+T	java:S106"9Replace this use of System.out or System.err by a logger.(±Ô±`8äÁâ·£1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ8åÁâ·£1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÇîÁÿÿÿÿÿ8çÁâ·£1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ8éÁâ·£1
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ò¢«Êùÿÿÿÿ8ëÁâ·£1
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ8ìÁâ·£1
+q
+java:S42760"TRefactor this code to use the more specialised Functional Interface 'DoubleConsumer'(ãª¬8ìÁâ·£1
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(ãª¬8ìÁâ·£1
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(ÆÀûı8íÁâ·£1
+Z	java:S106B"9Replace this use of System.out or System.err by a logger.(‚‡¼Æøÿÿÿÿ8îÁâ·£1
+Z	java:S106H"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ8ïÁâ·£1
+Q
+java:S1854M"5Remove this useless assignment to local variable "x".(ğúµ8È›î·£1
+U	java:S106L"9Replace this use of System.out or System.err by a logger.(Ö‘è8ğÁâ·£1
+B
+java:S1481M"&Remove this unused "x" local variable.(ğúµ8Ê›î·£1
+W
+java:S1128"5Remove this unused import 'java.util.OptionalDouble'.(‰ÀÕÿøÿÿÿÿ8ğÁâ·£1

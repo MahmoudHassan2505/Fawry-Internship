@@ -1,0 +1,27 @@
+
+g
+java:S1854"ERemove this useless assignment to local variable "patientRepository".(æ­ËÕüÿÿÿÿ8—Ã˜ˆ¦1
+d
+java:S1854"BRemove this useless assignment to local variable "drugRepository".(ø£Ÿáùÿÿÿÿ8Úè”ˆ¦1
+b
+java:S1854"FRemove this useless assignment to local variable "hospitalRepository".(…œìY8…Í™ˆ¦1
+S
+java:S1481"7Remove this unused "hospitalRepository" local variable.(…œìY8†Í™ˆ¦1
+U
+java:S1481"3Remove this unused "drugRepository" local variable.(ø£Ÿáùÿÿÿÿ8Þè”ˆ¦1
+X
+java:S1481"6Remove this unused "patientRepository" local variable.(æ­ËÕüÿÿÿÿ8šÃ˜ˆ¦1
+X	java:S125"<This block of commented-out lines of code should be removed.(–´¡ö8‡Í™ˆ¦1
+]	java:S125"<This block of commented-out lines of code should be removed.(ëÿ®£þÿÿÿÿ8Ê¶›ˆ¦1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(«˜â±8˜ê›ˆ¦1
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(¨îöá8™ê›ˆ¦1
+X
+java:S1128"6Remove this unused import 'org.example.Entity.Doctor'.(†Ïæüûÿÿÿÿ8Í­œˆ¦1
+V
+java:S1128"4Remove this unused import 'org.example.Entity.Drug'.(úÅÍÊüÿÿÿÿ8Í­œˆ¦1
+Y
+java:S1128"7Remove this unused import 'org.example.Entity.Patient'.(ªó©ãýÿÿÿÿ8Í­œˆ¦1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Í­œˆ¦1
+Z
+java:S1128"8Remove this unused import 'java.util.function.Consumer'.(Ì†ƒÔùÿÿÿÿ8Í­œˆ¦1

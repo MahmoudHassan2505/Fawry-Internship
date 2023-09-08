@@ -1,0 +1,11 @@
+
+O
+java:S4925"-Remove this "Class.forName()", it is useless.(õ†¨Äùÿÿÿÿ8–’àˆ¦1
+X
+java:S6437
+"6Revoke and change this password, as it is compromised.(Îö”üÿÿÿÿ8—’àˆ¦1
+]	java:S125"<This block of commented-out lines of code should be removed.(úù•¨úÿÿÿÿ8—’àˆ¦1
+]	java:S125"<This block of commented-out lines of code should be removed.(É÷úùÿÿÿÿ8¸Ô³‰¦1
+]	java:S125""<This block of commented-out lines of code should be removed.(øğ·Êÿÿÿÿÿ8ÁÁ¼‰¦1
+Z	java:S106-"9Replace this use of System.out or System.err by a logger.(·”ò…ıÿÿÿÿ8â¬²‰¦1
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(òÚ™ìøÿÿÿÿ8ã¬²‰¦1
