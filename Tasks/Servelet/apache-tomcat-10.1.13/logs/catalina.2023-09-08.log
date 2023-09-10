@@ -1,0 +1,159 @@
+08-Sep-2023 23:53:09.371 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.13
+08-Sep-2023 23:53:09.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 21:34:59 UTC
+08-Sep-2023 23:53:09.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.13.0
+08-Sep-2023 23:53:09.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Sep-2023 23:53:09.374 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-20
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           20.0.1+9-29
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:53:09.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\conf\logging.properties
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Sep-2023 23:53:09.382 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Sep-2023 23:53:09.383 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Sep-2023 23:53:09.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Sep-2023 23:53:09.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Sep-2023 23:53:09.386 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:53:09.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:53:09.387 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\temp
+08-Sep-2023 23:53:09.389 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.5] using APR version [1.7.4].
+08-Sep-2023 23:53:09.394 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.10 1 Aug 2023]
+08-Sep-2023 23:53:09.560 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Sep-2023 23:53:09.569 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1015)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:554)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:556)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:247)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:202)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1278)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1291)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:622)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:77)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1013)
+		... 11 more
+08-Sep-2023 23:53:09.570 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [324] milliseconds
+08-Sep-2023 23:53:09.606 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Sep-2023 23:53:09.606 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.13]
+08-Sep-2023 23:53:09.629 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war]
+08-Sep-2023 23:53:09.868 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war] has finished in [238] ms
+08-Sep-2023 23:53:09.868 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs]
+08-Sep-2023 23:53:09.895 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs] has finished in [26] ms
+08-Sep-2023 23:53:09.895 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples]
+08-Sep-2023 23:53:10.143 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples] has finished in [248] ms
+08-Sep-2023 23:53:10.144 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager]
+08-Sep-2023 23:53:10.170 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager] has finished in [26] ms
+08-Sep-2023 23:53:10.170 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager]
+08-Sep-2023 23:53:10.199 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager] has finished in [29] ms
+08-Sep-2023 23:53:10.199 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT]
+08-Sep-2023 23:53:10.216 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT] has finished in [16] ms
+08-Sep-2023 23:53:10.218 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [646] milliseconds
+08-Sep-2023 23:56:48.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.13
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 21:34:59 UTC
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.13.0
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-20
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           20.0.1+9-29
+08-Sep-2023 23:56:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Sep-2023 23:56:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:56:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:56:48.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\conf\logging.properties
+08-Sep-2023 23:56:48.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Sep-2023 23:56:48.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Sep-2023 23:56:48.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Sep-2023 23:56:48.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Sep-2023 23:56:48.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Sep-2023 23:56:48.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Sep-2023 23:56:48.413 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Sep-2023 23:56:48.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Sep-2023 23:56:48.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:56:48.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:56:48.414 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\temp
+08-Sep-2023 23:56:48.417 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.5] using APR version [1.7.4].
+08-Sep-2023 23:56:48.421 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.10 1 Aug 2023]
+08-Sep-2023 23:56:48.569 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9090"]
+08-Sep-2023 23:56:48.584 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [295] milliseconds
+08-Sep-2023 23:56:48.617 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Sep-2023 23:56:48.617 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.13]
+08-Sep-2023 23:56:48.636 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war]
+08-Sep-2023 23:56:48.861 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war] has finished in [225] ms
+08-Sep-2023 23:56:48.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs]
+08-Sep-2023 23:56:48.886 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs] has finished in [24] ms
+08-Sep-2023 23:56:48.886 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples]
+08-Sep-2023 23:56:49.141 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples] has finished in [255] ms
+08-Sep-2023 23:56:49.142 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager]
+08-Sep-2023 23:56:49.171 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager] has finished in [29] ms
+08-Sep-2023 23:56:49.172 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager]
+08-Sep-2023 23:56:49.201 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager] has finished in [30] ms
+08-Sep-2023 23:56:49.201 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT]
+08-Sep-2023 23:56:49.218 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT] has finished in [16] ms
+08-Sep-2023 23:56:49.220 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9090"]
+08-Sep-2023 23:56:49.260 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [674] milliseconds
+08-Sep-2023 23:58:09.338 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/servelet-demo-1.0-SNAPSHOT]
+08-Sep-2023 23:58:09.371 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war]
+08-Sep-2023 23:58:09.406 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war] has finished in [35] ms
+08-Sep-2023 23:58:50.904 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.13
+08-Sep-2023 23:58:50.906 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 21:34:59 UTC
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.13.0
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-20
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           20.0.1+9-29
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:58:50.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\conf\logging.properties
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Sep-2023 23:58:50.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Sep-2023 23:58:50.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Sep-2023 23:58:50.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Sep-2023 23:58:50.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Sep-2023 23:58:50.915 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:58:50.916 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13
+08-Sep-2023 23:58:50.916 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\temp
+08-Sep-2023 23:58:50.918 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.5] using APR version [1.7.4].
+08-Sep-2023 23:58:50.922 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.10 1 Aug 2023]
+08-Sep-2023 23:58:51.070 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9090"]
+08-Sep-2023 23:58:51.085 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [291] milliseconds
+08-Sep-2023 23:58:51.124 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Sep-2023 23:58:51.124 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.13]
+08-Sep-2023 23:58:51.144 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war]
+08-Sep-2023 23:58:51.366 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\servelet-demo-1.0-SNAPSHOT.war] has finished in [221] ms
+08-Sep-2023 23:58:51.366 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs]
+08-Sep-2023 23:58:51.389 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\docs] has finished in [23] ms
+08-Sep-2023 23:58:51.390 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples]
+08-Sep-2023 23:58:51.641 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\examples] has finished in [250] ms
+08-Sep-2023 23:58:51.641 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager]
+08-Sep-2023 23:58:51.667 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\host-manager] has finished in [26] ms
+08-Sep-2023 23:58:51.668 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager]
+08-Sep-2023 23:58:51.696 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\manager] has finished in [28] ms
+08-Sep-2023 23:58:51.696 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT]
+08-Sep-2023 23:58:51.712 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\internship\Github-Fawry-Repo\Fawry-Internship\Tasks\Servelet\apache-tomcat-10.1.13\webapps\ROOT] has finished in [16] ms
+08-Sep-2023 23:58:51.716 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9090"]
+08-Sep-2023 23:58:51.756 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [669] milliseconds
+08-Sep-2023 23:59:42.275 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/servelet-demo-1.0-SNAPSHOT]
